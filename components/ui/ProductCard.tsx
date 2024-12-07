@@ -29,7 +29,7 @@ const ProductCard: React.FC<ProductCards> = ({
   inlineRating = false,
 }) => {
   return (
-    <div className={`${poppins.className} m-4 justify-items-center md:justify-items-start`}>
+    <div className={`${poppins.className} m-4 justify-items-start`}>
       <div className=" cursor-pointer relative group min-h-56 max-h-96 md:max-w-60 md:max-h-56 bg-graybg p-3 rounded overflow-hidden">
         <div className={`${
               discount || isNew
@@ -59,9 +59,9 @@ const ProductCard: React.FC<ProductCards> = ({
           width={1000}
           height={1000}
           alt={name}
-          className="max-w-72 z-0 min-h-52 min-w-56 max-h-96 md:max-w-64 place-self-center items-center justify-self-center md:max-h-none -mt-24 p-7"
+          className="max-w-72 z-0 flex min-h-52 min-w-56 max-h-96 md:max-w-64 place-self-center items-center justify-self-center md:max-h-none -mt-24 p-7"
         ></Image>
-        <div className="w-full absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-white justify-items-center text-center items-center place-content-center font-medium">
+        <div className="w-full flex absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-white justify-center text-center items-center font-medium">
           <p>Add to Cart</p>
         </div>
       </div>

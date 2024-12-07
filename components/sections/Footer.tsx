@@ -9,8 +9,8 @@ import { FiTwitter } from 'react-icons/fi'
 const Footer = () => {
   return (
     <footer className=" text-white bg-primary body-font">
-  <div className="container justify-evenly lg:px-20 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div className="w-60 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+  <div className="container justify-evenly px-5 lg:px-20 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div className=" w-60 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
     <h2 className={`${inter.className} title-font font-medium tracking-widest text-2xl mb-6`}>
           Exclusive
         </h2>

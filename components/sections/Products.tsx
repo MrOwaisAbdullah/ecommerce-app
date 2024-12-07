@@ -19,26 +19,26 @@ const Products = () => {
             <span className='' ><ProductCard image='/product11.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
             <span className='' ><ProductCard image='/product12.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
             <span className='flex flex-col-reverse' >
-                <div className='flex ml-5 gap-1 -mt-3 self-center md:self-start'>
+                <div className='flex ml-5 gap-1 -mt-3'>
                     <div className='rounded-full inline-block w-4 h-4 bg-[#FB1314] border border-black '>
                         <div className="border h-full w-full border-white rounded-full"></div></div>
                     <div className='rounded-full w-4 h-4 bg-secondary '></div>            
                 </div> 
                 <ProductCard image='/product13.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true} isNew={true}/></span>
             <span className='flex flex-col-reverse' >
-                <div className='flex ml-5 gap-1 -mt-3 self-center md:self-start'>
+                <div className='flex ml-5 gap-1 -mt-3'>
                     <div className='rounded-full inline-block w-4 h-4 bg-[#EEFF61] border border-black '>
                         <div className="border h-full w-full border-white rounded-full"></div></div>
                     <div className='rounded-full w-4 h-4 bg-secondary '></div>            
                 </div> <ProductCard image='/product14.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
             <span className='flex flex-col-reverse' >
-                <div className='flex ml-5 gap-1 -mt-3 self-center md:self-start'>
+                <div className='flex ml-5 gap-1 -mt-3'>
                     <div className='rounded-full inline-block w-4 h-4 bg-black border border-black '>
                         <div className="border h-full w-full border-white rounded-full"></div></div>
                     <div className='rounded-full w-4 h-4 bg-secondary '></div>            
                 </div> <ProductCard image='/product15.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true} isNew={true}/></span>
             <span className='flex flex-col-reverse' >
-                <div className='flex ml-5 gap-1 -mt-3 self-center md:self-start'>
+                <div className='flex ml-5 gap-1 -mt-3'>
                     <div className='rounded-full inline-block w-4 h-4 bg-[#184A48] border border-black '>
                         <div className="border h-full w-full border-white rounded-full"></div></div>
                     <div className='rounded-full w-4 h-4 bg-secondary '></div>            
