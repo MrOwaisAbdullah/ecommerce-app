@@ -16,27 +16,27 @@ const Category = () => {
     <PagginationArrows />
     </div>
     <div className='flex flex-wrap m-auto place-content-center justify-items-center  gap-4'>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <TfiMobile className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Phones</h3>
             </div>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <HiOutlineComputerDesktop className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Computer</h3>
             </div>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <IoWatchOutline className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>SmartWatch</h3>
             </div>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <PiCamera className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Camera</h3>
             </div>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <LuHeadphones className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Headphones</h3>
             </div>
-            <div className='group text-center w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 place-items-center items-center'>
             <LuGamepad  className='text-5xl place-self-center group-hover:text-white' />
             <h3 className='mt-3 group-hover:text-white'>Gaming</h3>
             </div>
