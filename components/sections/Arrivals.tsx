@@ -8,7 +8,7 @@ const Arrivals = () => {
 
       <Headings heading="New Arrival" subheading="Featured"/>
 
-    <div className="flex gap-6 lg:px-8 flex-wrap md:flex-nowrap mt-14">
+    <div className="flex gap-4 xl:gap-6  lg:px-8 flex-wrap md:flex-nowrap mt-14">
       <div className="flex p-6  h-[450px] rounded bg-black justify-between w-full text-center lg:text-left lg:w-1/2 bg-[url('/category1.png')] bg-cover bg-no-repeat bg-center">
           <div className="flex flex-col text-background w-full justify-center lg:justify-end content-end gap-2 mb-3">
             <h2
@@ -38,7 +38,7 @@ const Arrivals = () => {
           </div>
         </div>
 
-        <div className="flex h-[220px] gap-6 mt-6">
+        <div className="flex h-[220px] gap-4 xl:gap-6 mt-4 xl:mt-6">
           <div className="relative w-1/2 rounded  bg-black/90 bg-gradient-radial from-white/70 via-black/50 to-black/70 bg-center " style={{ backgroundSize: "130% 130%" }} >
             <div className="absolute inset-0 bg-[url('/category3.png')] bg-cover bg-no-repeat bg-left" style={{ backgroundSize: "140% 100%" }}></div>
           <div className="relative flex p-5">
@@ -59,7 +59,7 @@ const Arrivals = () => {
           <div className="relative w-1/2 rounded bg-black/90 bg-gradient-radial from-white/70 via-black/50 to-black/70 bg-center " style={{ backgroundSize: "130% 130%" }}>
             <div className="absolute inset-0 bg-[url('/category4.png')] bg-contain bg-no-repeat bg-center"></div>
           <div className="relative flex p-5 justify-between ">
-          <div className="flex flex-col text-background mt-16 md:mt-20 xl:mt-24 gap-2">
+          <div className="flex flex-col text-background mt-14 md:mt-20 xl:mt-24 gap-2">
           <h2
               className={`${inter.className} text-2xl text-background font-semibold mb-1 leading-snug text-left`}
             >
