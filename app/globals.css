@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base{
+  body {
+    @apply bg-background;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* globals.css */
+.responsive-bg {
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+  background-position: 130% 50%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 640px) {
+  .responsive-bg {
+    background-size: 500px 500px;
+    background-position: 50% 50%;
   }
 }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .responsive-bg {
+    background-size: 700px 700px;
+    background-position: 300% 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .responsive-bg {
+    background-size: 800px 800px;
+    background-position: 130% 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-bg {
+    background-size: 700px 700px;
+    background-position: 120% 50%;
+  }
+}
+
