@@ -12,7 +12,7 @@ const Products = () => {
         <Headings subheading="Our Products" heading="Explore Our Products" />
         <PagginationArrows />
         </div>
-        <div className='flex flex-wrap m-auto p-5 mb-6 justify-center'>
+        <div className='flex flex-wrap xl:flex-nowrap m-auto p-5 mb-6 justify-center'>
             {/* Product cards */}
             <span className='' ><ProductCard image='/product9.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
             <span className='' ><ProductCard image='/product10.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>

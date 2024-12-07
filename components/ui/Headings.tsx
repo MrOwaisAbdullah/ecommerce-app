@@ -3,7 +3,7 @@ import React from 'react'
 
 interface Headings {
     subheading: string,
-    heading: string
+    heading?: string
 }
 
 const Headings: React.FC<Headings> = ({subheading, heading}) => {

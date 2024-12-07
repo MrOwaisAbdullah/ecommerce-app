@@ -15,7 +15,7 @@ const Category = () => {
     <Headings subheading="Categories" heading="Browse By Category" />
     <PagginationArrows />
     </div>
-    <div className='flex flex-wrap m-auto justify-center p-5 gap-4'>
+    <div className='flex flex-wrap xl:flex-nowrap m-auto justify-center p-5 gap-4'>
             <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
             <TfiMobile className='text-5xl group-hover:text-white justify-center' />
             <h3 className='text-center mt-3 group-hover:text-white'>Phones</h3>
