@@ -80,15 +80,15 @@ const Footer = () => {
           </li>
         </nav>
       </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full justify-center items-center">
+      <div className="flex flex-col lg:w-1/4 md:w-1/2 w-full justify-center items-center">
         <h2 className="title-font font-medium tracking-widest text-xl mb-6">
           Download
         </h2>
         <p className="mt-2 mb-2 text-xs text-gray-300">
         Save $3 with App New User Only
       </p>
-        <Image src={downloadapp} alt='qr code' className='place-self-center md:place-self-start'></Image>
-        <div className='flex gap-5 text-xl mt-3 place-self-center md:place-self-start'>
+        <Image src={downloadapp} alt='qr code' className='flex justify-center md:justify-start'></Image>
+        <div className='flex gap-5 text-xl mt-5 justify-center md:justify-start'>
         <FaFacebookF />
         <FiTwitter />
         <FaInstagram />
@@ -98,8 +98,8 @@ const Footer = () => {
     </div>
   </div>
   <div className={`${poppins.className} bg-primary w-full justify-center items-center border-t border-[#141414]`}>
-      <p className="text-[#3d3d3d] p-3 text-center">
-        © Copyright Rimel 2022. All right reserved
+      <p className="text-[#3d3d3d] p-4 text-center">
+        © Copyright Owais Abdullah 2024. All right reserved
       </p>
     </div>
 </footer>

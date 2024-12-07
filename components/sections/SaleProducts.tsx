@@ -8,14 +8,14 @@ import Button from '../ui/Button'
 const SaleProducts = () => {
   return (
     <section className='mt-12 pt-12 relative overflow-hidden'>
-        <div className='xl:container xl:px-20 px-3 flex mb-8 justify-between '>
+        <div className='xl:container xl:px-20 px-5 flex mb-8 justify-between '>
         <div className='flex gap-24'>
         <Headings subheading="Today's" heading="Flash Sales" />
         <span className='hidden lg:block mt-11'><Countdown /></span>
         </div>
         <PagginationArrows />
         </div>
-        <div className='flex md:absolute xl:-right-80 xl:left-28'>
+        <div className='flex md:absolute p-5 xl:-right-80 xl:left-28'>
             {/* Product cards */}
             <span className='m-auto md:m-0'><ProductCard image='/product1.png' name='HAVIT HV-G92 Gamepad' newPrice={120} oldPrice={160} rating={5} ratingCount={88} discount={40}/></span>
             <span className='hidden md:block' ><ProductCard image='/product2.png' name='AK-900 Wired Keyboard' newPrice={960} oldPrice={1160} rating={4} ratingCount={75} discount={35}/></span>

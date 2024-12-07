@@ -65,7 +65,7 @@ const Arrivals = () => {
             >
               Perfume
             </h2>
-            <p className="text-sm">GUCCI INTENSE OUD EDP</p>
+            <p className="text-sm">GUCCI Intense oud edp</p>
             <p className="font-medium flex items-center text-background gap-3 mb-1 mt-1 lg:-mb-3 underline underline-offset-4 justify-start text-left">
               Shop Now
             </p>

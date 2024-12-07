@@ -22,14 +22,14 @@ const Header = () => {
 
   return (
     <header>
-      <div className="w-full flex flex-col md:flex-row gap-2 bg-primary p-1 text-background items-center justify-center md:justify-between xl:justify-normal ">
-        <p className="xl:justify-self-center text-center md:text-start w-3/4 xl:ml-80 ml-0 justify-self-start">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
-          <Link className="underline ml-1" href={"#"}>
+      <div className="w-full flex flex-col md:flex-row gap-2 bg-primary px-4 pt-1 lg:py-3 text-background items-center justify-center md:justify-between xl:justify-normal ">
+        <p className="flex sm:flex-row flex-col xl:justify-center text-start xl:w-3/4 xl:ml-80 ml-0 justify-start">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          <Link className="underline md:text-left flex justify-end ml-3 font-medium -mt-6 sm:mt-0" href={"#"}>
             ShopNow
           </Link>
         </p>
-        <p className="flex lg:justify-self-end gap-2 pb-2 md:pb-0  md:w-2/12 md:pl-10 items-center justify-self-end">
+        <p className="flex gap-2 pb-2 md:pb-0 md:w-2/12 md:pl-10 items-center justify-start md:justify-end">
           English
           <IoIosArrowDown />
         </p>
@@ -37,7 +37,7 @@ const Header = () => {
       <div
         className={`${poppins.className} flex w-full text-text border-b justify-between lg:content-center border-zinc-300 px-5 lg:px-12 xl:px-28 h-[5.5rem]`}
       >
-        <div className="xl:container lg:mx-auto flex flex-wrap pt-5 pb-2 w-full flex-row justify-between items-center">
+        <div className="xl:container lg:mx-auto flex pt-5 pb-2 w-full flex-row justify-between items-center">
           <Link
             href="/"
             className={`${inter.className} flex title-font text-2xl font-bold items-center text-gray-900`}
@@ -79,11 +79,11 @@ const Header = () => {
               />
               <RiSearchLine className="text-2xl" />
             </div>
-            <GoHeart className="text-2xl ml-5 hidden xs:flex" />
-            <IoCartOutline className="text-2xl ml-5 hidden xs:flex" />
+            <GoHeart className="text-2xl ml-5 flex" />
+            <IoCartOutline className="text-2xl ml-5 mr-4 flex" />
           </div>
           <Drawer direction="left" open={isOpen} onOpenChange={setIsOpen}>
-            <button onClick={toggleDrawer} className="text-2xl lg:hidden">
+            <button onClick={toggleDrawer} className="text-3xl lg:hidden">
               <CgMenuRight />
             </button>
             <DrawerContent className="bg-background mx-auto max-w-[80%] text-left px-6 lg:max-w-[35%] md:max-w-[50%]">

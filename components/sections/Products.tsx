@@ -7,12 +7,12 @@ import Button from '../ui/Button'
 
 const Products = () => {
   return (
-        <section className={`${poppins.className} xl:container xl:px-20 px-3 mt-12 pt-12 relative overflow-hidden`}>
+        <section className={`${poppins.className} xl:container xl:px-20 px-5 mt-12 pt-12 relative overflow-hidden`}>
         <div className='flex mb-8 justify-between '>
         <Headings subheading="Our Products" heading="Explore Our Products" />
         <PagginationArrows />
         </div>
-        <div className='flex flex-wrap m-auto mb-6 justify-center'>
+        <div className='flex flex-wrap m-auto p-5 mb-6 justify-center'>
             {/* Product cards */}
             <span className='' ><ProductCard image='/product9.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
             <span className='' ><ProductCard image='/product10.png' name='Gucci duffle bag' newPrice={960}  rating={4.5} ratingCount={75} inlineRating={true}/></span>
