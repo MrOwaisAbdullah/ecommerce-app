@@ -16,7 +16,7 @@ const Category = () => {
     <PagginationArrows />
     </div>
     <div className='flex flex-wrap m-auto content-center justify-items-center  gap-4'>
-            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 justify-items-center items-center'>
+            <div className='group text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-3 md:px-10 justify-items-center items-center'>
             <TfiMobile className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Phones</h3>
             </div>
