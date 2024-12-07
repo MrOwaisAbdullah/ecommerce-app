@@ -61,7 +61,7 @@ const ProductCard: React.FC<ProductCards> = ({
           alt={name}
           className="max-w-72 z-0 min-h-52 min-w-56 max-h-96 md:max-w-64 place-self-center items-center justify-self-center md:max-h-none -mt-24 p-7"
         ></Image>
-        <div className="w-full absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-white justify-items-center place-content-center font-medium">
+        <div className="w-full absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-white justify-items-center text-center items-center place-content-center font-medium">
           <p>Add to Cart</p>
         </div>
       </div>
