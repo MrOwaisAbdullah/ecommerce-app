@@ -10,33 +10,33 @@ import { TfiMobile } from 'react-icons/tfi'
 
 const Category = () => {
   return (
-    <section className={`${poppins.className} xl:container xl:px-20 px-5 mt-12 pt-12 relative overflow-hidden`}>
-    <div className='flex mb-8 justify-between '>
+    <section className={`${poppins.className} xl:container px-5 mt-12 pt-12 relative overflow-hidden`}>
+    <div className='flex mb-8 justify-between xl:px-8'>
     <Headings subheading="Categories" heading="Browse By Category" />
     <PagginationArrows />
     </div>
-    <div className='flex flex-wrap xl:flex-nowrap m-auto justify-center p-5 gap-4'>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 m-auto justify-center p-5 gap-4'>
+            <div className='group flex flex-col justify-center text-center w-full  border rounded hover:bg-secondary py-8 px-10 items-center'>
             <TfiMobile className='text-5xl group-hover:text-white justify-center' />
             <h3 className='text-center mt-3 group-hover:text-white'>Phones</h3>
             </div>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+            <div className='group flex flex-col justify-center text-center w-full  border rounded hover:bg-secondary py-8 px-10 items-center'>
             <HiOutlineComputerDesktop className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Computer</h3>
             </div>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+            <div className='group flex flex-col justify-center text-center w-full  border rounded hover:bg-secondary py-8 px-10 items-center'>
             <IoWatchOutline className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>SmartWatch</h3>
             </div>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+            <div className='group flex flex-col justify-center text-center w-full  border rounded hover:bg-secondary py-8 px-10 items-center'>
             <PiCamera className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Camera</h3>
             </div>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+            <div className='group flex flex-col justify-center text-center w-full border rounded hover:bg-secondary py-8 px-10 items-center'>
             <LuHeadphones className='text-5xl group-hover:text-white' />
             <h3 className='text-center mt-3 group-hover:text-white'>Headphones</h3>
             </div>
-            <div className='group flex flex-col justify-center text-center w-full md:w-[170px] border rounded hover:bg-secondary py-8 px-10 items-center'>
+            <div className='group flex flex-col justify-center text-center w-full border rounded hover:bg-secondary py-8 px-10 items-center'>
             <LuGamepad  className='text-5xl place-self-center group-hover:text-white' />
             <h3 className='mt-3 group-hover:text-white'>Gaming</h3>
             </div>

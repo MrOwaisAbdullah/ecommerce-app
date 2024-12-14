@@ -7,7 +7,7 @@ import { poppins } from '@/app/fonts'
 
 const Features = () => {
   return (
-    <section className={`${poppins.className} relative flex-wrap lg:flex-nowrap xl:container xl:px-28 gap-24 flex mx-auto place-content-center m-24`}>
+    <section className={`${poppins.className} relative container grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-24 mx-auto place-content-center m-24`}>
     <div className='flex flex-col justify-center items-center text-center'>
         <div className='rounded-full flex border-8 justify-center items-center border-gray-300 h-[70px] w-[70px] bg-black text-white'>
             <TbTruckDelivery className='flex justify-center items-center text-3xl' />

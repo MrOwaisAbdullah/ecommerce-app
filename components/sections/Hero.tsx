@@ -8,7 +8,7 @@ import { GoArrowRight } from 'react-icons/go'
 
 const Hero = () => {
   return (
-    <section className='xl:container flex xl:px-12'>
+    <section className='xl:container flex'>
         <div className={`${poppins.className} w-1/4 border-r hidden xl:block`}>
             <ul className='m-8'>
                 <li className='flex items-center justify-between '>Women&apos;s Fasion <MdKeyboardArrowRight />

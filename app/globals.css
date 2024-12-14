@@ -25,21 +25,20 @@
 @media (min-width: 641px) and (max-width: 1024px) {
   .responsive-bg {
     background-size: 700px 700px;
-    background-position: 300% 50%;
+    background-position: 130% 50%;
   }
 }
 
 @media (min-width: 1025px) {
   .responsive-bg {
     background-size: 800px 800px;
-    background-position: 130% 50%;
+    background-position: 100% 50%;
   }
 }
 
 @media (min-width: 1280px) {
   .responsive-bg {
     background-size: 700px 700px;
-    background-position: 120% 50%;
   }
 }
 

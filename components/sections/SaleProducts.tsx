@@ -8,8 +8,8 @@ import Button from '../ui/Button'
 const SaleProducts = () => {
   return (
     <section className='mt-12 pt-12 relative overflow-hidden'>
-        <div className='xl:container xl:px-20 px-5 flex mb-8 justify-between '>
-        <div className='flex gap-24'>
+        <div className='xl:container px-5 flex mb-8 justify-between '>
+        <div className='flex gap-24 xl:px-8'>
         <Headings subheading="Today's" heading="Flash Sales" />
         <span className='hidden lg:block mt-11'><Countdown /></span>
         </div>

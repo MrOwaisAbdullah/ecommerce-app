@@ -7,7 +7,6 @@ import { TbTruckDelivery } from 'react-icons/tb'
 import { GrPowerCycle } from 'react-icons/gr'
 import Headings from '@/components/ui/Headings'
 import ProductCard from '@/components/ui/ProductCard'
-import Button from '@/components/ui/Button'
 
 const page = () => {
   return (
