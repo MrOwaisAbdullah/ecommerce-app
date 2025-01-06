@@ -1,15 +1,23 @@
+"use client"
 import { poppins } from "@/app/fonts";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Headings from "../ui/Headings";
 import PagginationArrows from "../ui/PagginationArrows";
 import Button from "../ui/Button";
 import { getProducts } from "@/sanity/lib/client"; // Import the fetch function
 import ProductList from "./ProductList"; // Import the Client Component
 
-const Products = async () => {
-  // Fetch products from Sanity (Server Component)
-  const products = await getProducts();
+const Products = () => {
+  const [products, setProducts] = useState([]); // State to store products
 
+  // Fetch products from Sanity
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getProducts();
+      setProducts(products);
+    };
+    fetchProducts();
+  }, []);
   return (
     <section
       className={`${poppins.className} xl:container px-5 mt-12 pt-12 relative overflow-hidden`}

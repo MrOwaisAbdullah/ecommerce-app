@@ -14,7 +14,10 @@ interface Review {
     reviews?: Review[]; // Define reviews as an optional array of Review objects
     isNew?: boolean;
     productId: string; // Only include required props
-  }
+    slug?: {
+      current: string;
+    };
+    }
 
   interface Product {
     image: string;
@@ -36,6 +39,6 @@ interface Review {
     colorVariants?: { colorCode: string }[];
     discount?: number; // Add discount if needed
     inlineRating?: boolean; // Add inlineRating if needed
-    rating: number; // Add rating if needed
-    ratingCount: number; // Add ratingCount if needed
+    rating?: number; // Add rating if needed
+    ratingCount?: number; // Add ratingCount if needed
   }

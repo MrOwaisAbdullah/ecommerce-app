@@ -6,6 +6,7 @@ import Image from "next/image";
 import { GoHeart } from "react-icons/go";
 import { AiOutlineEye } from "react-icons/ai";
 import { urlFor } from "@/sanity/lib/image";
+import Link from "next/link";
 
 
 const ProductCard: React.FC<Product> = ({
@@ -16,6 +17,7 @@ const ProductCard: React.FC<Product> = ({
   reviews = [],
   isNew,
   discount,
+  slug,
   inlineRating = false,
 }) => {
   // Calculate average rating
@@ -24,9 +26,10 @@ const ProductCard: React.FC<Product> = ({
       ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
       : 0;
 
+      console.log(slug)
   return (
-    <div className="m-4 justify-items-start">
-      <div className="cursor-pointer relative group min-h-56 max-h-96 md:max-w-60 md:max-h-56 bg-graybg p-3 rounded overflow-hidden">
+    <div className="m-4 mx-auto">
+      <div className="cursor-pointer group min-h-60 max-h-56 max-w-[270px] bg-graybg p-3 rounded overflow-hidden">
         <div
           className={`${
             discount || isNew
@@ -55,13 +58,15 @@ const ProductCard: React.FC<Product> = ({
             <AiOutlineEye className="text-3xl rounded-full bg-white p-1" />
           </div>
         </div>
+        <Link href={`/product/${slug?.current}`}>
         <Image
           src={urlFor(image).url() || "/placeholder.png"}
           width={1000}
           height={1000}
           alt={name}
-          className="max-w-72 z-0 flex min-h-52 min-w-56 max-h-96 md:max-w-64 place-self-center items-center justify-self-center md:max-h-none -mt-24 p-7"
+          className="object-cover z-0 flex w-[120%] items-center my-auto -mt-16 justify-center p-3"
         />
+        </Link>
         <div className="w-full flex absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-graybg justify-center text-center items-center font-medium">
           <p>Add to Cart</p>
         </div>

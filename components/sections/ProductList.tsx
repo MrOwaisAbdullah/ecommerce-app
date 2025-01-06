@@ -38,6 +38,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             isNew={product.isNew}
             discount={product.discount}
             productId={product.productId} // Pass the product ID for the review form
+            slug={product.slug} // Pass the slug here
           />
         </span>
       ))}

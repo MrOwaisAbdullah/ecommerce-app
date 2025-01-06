@@ -42,6 +42,7 @@ const BestProducts: React.FC = () => {
               productId={product.productId} // Pass the product ID
               rating={product.rating || 0} // Pass rating or default to 0
               ratingCount={product.ratingCount || 0} // Pass ratingCount or default to 0
+              slug={product.slug} // Pass the slug here
             />
           </span>
         ))}

@@ -69,9 +69,9 @@ export default defineType({
       title: "Gallery Images",
       type: "array",
       of: [{ type: "image" }], // Array of images
-      description: "Upload up to 4 images for the product gallery.",
+      description: "Upload up to 3 images for the product gallery.",
       validation: (Rule) =>
-        Rule.max(4).error("You can upload a maximum of 4 images."), // Enforce max 4 images
+        Rule.max(3).error("You can upload a maximum of 3 images."), // Enforce max 3 images
     }),
     defineField({
       name: "isNew",
