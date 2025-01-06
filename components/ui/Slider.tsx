@@ -88,7 +88,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative md:top-10 w-full overflow-hidden h-[calc(60vh-60px)] lg:h-[calc(50vh-60px)] xl:h-[calc(40vh-60px)] lg:w-3/4 lg:left-10">
+    <div className="relative md:top-10 w-full overflow-hidden h-[calc(60vh-60px)] lg:h-[calc(50vh-50px)] xl:h-[calc(50vh-60px)] lg:w-[70%] xl:w-3/4 lg:left-10">
       {/* Slider Container */}
       <div
         className="flex h-full transition-transform duration-1000 ease-in-out"
@@ -107,9 +107,9 @@ const Slider = () => {
             key={index} // Use index as key since slides are duplicated
           >
             {/* Slide Content */}
-            <div className="z-10 flex flex-col items-center md:items-start sm:pt-8 px-4 gap-5 sm:px-12 text-center md:text-left">
+            <div className="z-10 flex flex-col py-8 items-center md:items-start sm:pt-6 px-4 gap-4 sm:px-8 xl:px-12 text-center md:text-left">
               {/* Icon and Subheading */}
-              <div className="flex text-background items-center justify-center md:justify-start gap-2 mb-3">
+              <div className="flex text-background items-center justify-center md:justify-start gap-2">
                 <Image
                   className="w-11"
                   src={slide.icon}
@@ -122,13 +122,13 @@ const Slider = () => {
 
               {/* Heading */}
               <h1
-                className={`${inter.className} text-5xl font-semibold mb-3 leading-snug  text-center md:text-left`}
+                className={`${inter.className} text-5xl font-semibold leading-snug  text-center md:text-left`}
               >
                 {slide.heading}
               </h1>
 
               {/* Button Text */}
-              <p className="font-medium flex items-center gap-3 mb-5 lg:-mb-3 underline underline-offset-8 justify-center md:justify-start text-center md:text-left">
+              <p className="font-medium flex items-center gap-3 lg:-mb-5 underline underline-offset-8 justify-center md:justify-start text-center md:text-left">
                 {slide.buttonText} <GoArrowRight />
               </p>
             </div>

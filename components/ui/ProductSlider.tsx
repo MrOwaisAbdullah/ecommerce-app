@@ -1,36 +1,43 @@
 "use client"; // Mark this component as a Client Component
 
-import React, { forwardRef, useEffect } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import "swiper/css";
 import ProductCard from "../ui/ProductCard";
+import { getProducts } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
-interface Product {
-  image: string;
-  name: string;
-  newPrice: number;
-  oldPrice?: number;
-  reviews?: Review[]; // Define reviews as an array of Review objects
-  isNew?: boolean;
-  productId: string;
-  _id: string;
-  slug: {
-    current: string;
-  };
-}
 
 interface ProductSliderProps {
-  products: Product[];
+  initialProducts?: Product[]; // Renamed to avoid confusion
 }
 
 const ProductSlider = forwardRef<SwiperRef, ProductSliderProps>(
-  ({ products }, ref) => {
+  ({ initialProducts = [] }, ref) => {
+    const [products, setProducts] = useState<Product[]>(initialProducts);
+
     useEffect(() => {
       if (ref && typeof ref !== "function" && ref.current) {
         // Force Swiper to update after the component mounts
         ref.current.swiper.update();
       }
     }, [ref]);
+
+    useEffect(() => {
+      // Fetch products from Sanity
+      const fetchProducts = async () => {
+        try {
+          const products = await getProducts();
+          setProducts(products);
+        } catch (error) {
+          console.error("Failed to fetch products:", error);
+        }
+      };
+
+      if (initialProducts.length === 0) {
+        fetchProducts();
+      }
+    }, [initialProducts]);
 
     return (
       <Swiper
@@ -55,10 +62,20 @@ const ProductSlider = forwardRef<SwiperRef, ProductSliderProps>(
           },
         }}
       >
-        {products.map((product, index) => (
-          <SwiperSlide key={index} className="flex justify-center m-auto">
+        {products.map((product) => (
+          <SwiperSlide key={product.productId} className="flex justify-center m-auto max-w-7xl">
             <div className="w-full">
-              <ProductCard {...product} productId={product._id} />
+              <ProductCard
+                image={urlFor(product.image).url() || "/default-product.png"} // Fallback image if none is provided
+                name={product.name}
+                newPrice={product.newPrice}
+                oldPrice={product.oldPrice}
+                reviews={product.reviews || []} // Pass reviews or an empty array
+                isNew={product.isNew || false} // Set isNew to false if undefined
+                productId={product.productId} // Pass the product ID
+                rating={product.rating || 0} // Pass rating or default to 0
+                ratingCount={product.ratingCount || 0} // Pass ratingCount or default to 0
+              />
             </div>
           </SwiperSlide>
         ))}

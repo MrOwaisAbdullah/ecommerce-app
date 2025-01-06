@@ -9,7 +9,7 @@ import SalesBanner from "@/components/sections/SalesBanner";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden m-auto max-w-7xl">
       <Hero />
       <SaleProducts />
       <Category />
