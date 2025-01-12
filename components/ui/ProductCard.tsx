@@ -29,7 +29,7 @@ const ProductCard: React.FC<Product> = ({
       console.log(slug)
   return (
     <div className="m-4 mx-auto">
-      <div className="cursor-pointer group min-h-60 max-h-56 max-w-[270px] bg-graybg p-3 rounded overflow-hidden">
+      <div className="relative cursor-pointer group min-h-60 max-h-56 max-w-[270px] bg-graybg p-3 rounded overflow-hidden">
         <div
           className={`${
             discount || isNew
@@ -77,9 +77,6 @@ const ProductCard: React.FC<Product> = ({
         <p className="font-medium text-secondary pl-1">{`$${newPrice}`}</p>
         {oldPrice && (
           <p className="font-medium text-graytext pl-1 line-through">{`$${oldPrice}`}</p>
-        )}
-        {discount && (
-          <p className="font-medium text-red-500 pl-1">{`(${discount}% off)`}</p>
         )}
         <div
           className={`${

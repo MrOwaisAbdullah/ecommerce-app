@@ -46,25 +46,25 @@ const Header = () => {
           </Link>
           <nav className="md:ml-auto hidden lg:flex flex-wrap items-center text-base justify-center">
             <Link
-              href="#hero"
+              href="/"
               className="mr-9 text-lg active:text-gray-900 hover:text-gray-900"
             >
               Home
             </Link>
             <Link
-              href="#contact"
+              href="/"
               className="mr-9 text-lg active:text-gray-900 hover:text-gray-900"
             >
               Contact
             </Link>
             <Link
-              href="#about"
+              href="/"
               className="mr-9 text-lg active:text-gray-900 hover:text-gray-900"
             >
               About
             </Link>
             <Link
-              href="#sign"
+              href="/"
               className="mr-9 text-lg active:text-gray-900 hover:text-gray-900"
             >
               Sign Up
@@ -80,7 +80,9 @@ const Header = () => {
               <RiSearchLine className="text-2xl" />
             </div>
             <GoHeart className="text-2xl ml-5 flex" />
+            <Link href={"/cart"}>
             <IoCartOutline className="text-2xl ml-5 mr-4 flex" />
+            </Link>
           </div>
           <Drawer direction="left" open={isOpen} onOpenChange={setIsOpen}>
             <button onClick={toggleDrawer} className="text-3xl lg:hidden">

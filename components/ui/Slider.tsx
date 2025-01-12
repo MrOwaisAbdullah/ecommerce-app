@@ -88,7 +88,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative md:top-10 w-full overflow-hidden h-[calc(60vh-60px)] lg:h-[calc(50vh-50px)] xl:h-[calc(50vh-60px)] lg:w-[70%] xl:w-3/4 lg:left-10">
+    <div className="relative md:top-10 w-full overflow-hidden h-[calc(60vh-60px)] lg:h-[calc(50vh-50px)] xl:h-[calc(60vh-60px)] lg:w-[70%] xl:w-3/4 lg:left-10">
       {/* Slider Container */}
       <div
         className="flex h-full transition-transform duration-1000 ease-in-out"

@@ -42,3 +42,10 @@ interface Review {
     rating?: number; // Add rating if needed
     ratingCount?: number; // Add ratingCount if needed
   }
+
+  interface Order {
+    id: string;
+    orderId: string;
+    date: number;
+    customerName: string;
+  }
