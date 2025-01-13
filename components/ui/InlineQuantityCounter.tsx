@@ -1,16 +1,16 @@
-'use client'; 
+'use client'; // Required for client-side interactivity
 
 import { useState } from 'react';
 
-interface QuantityCounterProps {
+interface InlineQuantityCounterProps {
   initialQuantity: number;
   onQuantityChange: (quantity: number) => void;
 }
 
-export default function QuantityCounter({
+export default function InlineQuantityCounter({
   initialQuantity,
   onQuantityChange,
-}: QuantityCounterProps) {
+}: InlineQuantityCounterProps) {
   const [quantity, setQuantity] = useState(initialQuantity);
 
   const handleDecrease = () => {
@@ -28,17 +28,17 @@ export default function QuantityCounter({
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 border rounded">
       <button
         onClick={handleDecrease}
-        className="bg-gray-200 px-2 rounded"
+        className="px-3 py-1 rounded h-full hover:bg-gray-200"
       >
         -
       </button>
-      <span className="text-lg font-semibold">{quantity}</span>
+      <span className="text-lg min-w-3 font-semibold">{quantity}</span>
       <button
         onClick={handleIncrease}
-        className="bg-gray-200 px-2 rounded"
+        className="px-3 py-1 rounded h-full hover:bg-gray-200"
       >
         +
       </button>

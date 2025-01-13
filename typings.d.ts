@@ -1,3 +1,12 @@
+interface Products {
+  productId: string;
+  name: string;
+  newPrice: number;
+  image: string;
+  quantity?: number;
+}
+
+
 interface Review {
     rating: number;
     comment?: string;
@@ -13,10 +22,14 @@ interface Review {
     oldPrice?: number;
     reviews?: Review[]; // Define reviews as an optional array of Review objects
     isNew?: boolean;
-    productId: string; // Only include required props
-    slug?: {
-      current: string;
+    productId?: string; // Only include required props
+    slug: {
+      current: string | null;
     };
+    discount?: number; 
+    inlineRating?: boolean; 
+    rating?: number; 
+    ratingCount?: number; 
     }
 
   interface Product {
@@ -30,17 +43,19 @@ interface Review {
     name: string;
     newPrice: number;
     oldPrice?: number;
-    reviews?: Review[]; // Define reviews as an array of Review objects
+    reviews?: Review[]; 
     isNew?: boolean;
-    productId?: string;
+    description?: string;
+    _id: string;
     slug?: {
       current: string;
     };
     colorVariants?: { colorCode: string }[];
-    discount?: number; // Add discount if needed
-    inlineRating?: boolean; // Add inlineRating if needed
-    rating?: number; // Add rating if needed
-    ratingCount?: number; // Add ratingCount if needed
+    discount?: number; 
+    inlineRating?: boolean; 
+    rating?: number; 
+    ratingCount?: number; 
+    quantity?: number;
   }
 
   interface Order {
@@ -49,3 +64,14 @@ interface Review {
     date: number;
     customerName: string;
   }
+
+  interface CartState {
+    cart: Products[];
+  }
+  
+  type CartAction =
+    | { type: "SET_CART"; cart: Products[] }
+    | { type: "ADD_TO_CART"; product: Product }
+    | { type: "REMOVE_FROM_CART"; id: string }
+    | { type: "UPDATE_QUANTITY"; id: string; quantity: number }
+    | { type: "CLEAR_CART" };

@@ -1,15 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import StarRating from "./StarRating"; // Import the StarRating component
 import Image from "next/image";
 import { GoHeart } from "react-icons/go";
 import { AiOutlineEye } from "react-icons/ai";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import { useCart } from "@/app/context/CartContext";
+import { Toast } from "./Toast";
 
 
-const ProductCard: React.FC<Product> = ({
+const ProductCard: React.FC<ProductCardProps> = ({
   image,
   name,
   newPrice,
@@ -18,6 +20,7 @@ const ProductCard: React.FC<Product> = ({
   isNew,
   discount,
   slug,
+  productId,
   inlineRating = false,
 }) => {
   // Calculate average rating
@@ -26,7 +29,24 @@ const ProductCard: React.FC<Product> = ({
       ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
       : 0;
 
-      console.log(slug)
+      const { dispatch } = useCart();
+      const [showToast, setShowToast] = useState(false);
+  
+    const handleAddToCart = () => {
+      dispatch({
+            type: "ADD_TO_CART",
+            product: {
+              _id: productId || "", // Ensure productId is a string
+              name: name, 
+              newPrice: newPrice,
+              image: urlFor(image).url(),
+              quantity: 1, // Default quantity is 1
+            },
+          });
+  
+          setShowToast(true);
+          setTimeout(() => setShowToast(false), 3000);
+    };
   return (
     <div className="m-4 mx-auto">
       <div className="relative cursor-pointer group min-h-60 max-h-56 max-w-[270px] bg-graybg p-3 rounded overflow-hidden">
@@ -67,7 +87,7 @@ const ProductCard: React.FC<Product> = ({
           className="object-cover z-0 flex w-[120%] items-center my-auto -mt-16 justify-center p-3"
         />
         </Link>
-        <div className="w-full flex absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-graybg justify-center text-center items-center font-medium">
+        <div onClick={handleAddToCart} className="w-full flex absolute bottom-0 left-0 group-hover:h-12 h-0 bg-primary text-graybg justify-center text-center items-center font-medium">
           <p>Add to Cart</p>
         </div>
       </div>
@@ -97,6 +117,13 @@ const ProductCard: React.FC<Product> = ({
         <StarRating rating={averageRating} />
         <p className="font-semibold text-sm text-graytext pt-2 pl-2">{`(${reviews.length || "0"})`}</p>
       </div>
+      {showToast && (
+              <Toast
+                message="Added to cart successfully!"
+                type="success"
+                onClose={() => setShowToast(false)}
+              />
+            )}
     </div>
   );
 };

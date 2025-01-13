@@ -31,7 +31,7 @@ const BestProducts: React.FC = () => {
       <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-auto p-5 justify-center">
         {/* Dynamically render product cards */}
         {products.map((product) => (
-          <span key={product.productId} className="">
+          <span key={product._id} className="">
             <ProductCard
               image={urlFor(product.image).url() || "/default-product.png"} // Fallback image if none is provided
               name={product.name}
@@ -39,10 +39,10 @@ const BestProducts: React.FC = () => {
               oldPrice={product.oldPrice}
               reviews={product.reviews || []} // Pass reviews or an empty array
               isNew={product.isNew || false} // Set isNew to false if undefined
-              productId={product.productId} // Pass the product ID
               rating={product.rating || 0} // Pass rating or default to 0
               ratingCount={product.ratingCount || 0} // Pass ratingCount or default to 0
-              slug={product.slug} // Pass the slug here
+              productId={product._id} // Pass the product ID for the review form
+              slug={product.slug || {current: null}} // Pass the slug here
             />
           </span>
         ))}

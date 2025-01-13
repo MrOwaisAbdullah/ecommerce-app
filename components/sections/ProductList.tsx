@@ -37,8 +37,8 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             reviews={product.reviews} // Pass resolved reviews to the ProductCard
             isNew={product.isNew}
             discount={product.discount}
-            productId={product.productId} // Pass the product ID for the review form
-            slug={product.slug} // Pass the slug here
+            productId={product._id} // Pass the product ID for the review form
+            slug={product.slug || {current: null}} // Pass the slug here
           />
         </span>
       ))}
