@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 
 
 interface ProductSliderProps {
+  products: Product[]; // Add the products prop
   initialProducts?: Product[]; // Renamed to avoid confusion
 }
 
